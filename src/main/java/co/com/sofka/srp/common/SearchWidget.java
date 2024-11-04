@@ -1,5 +1,6 @@
-package co.com.sofka.srp;
+package co.com.sofka.srp.main;
 
+import co.com.sofka.srp.common.AbstractComponent;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,7 +15,10 @@ public class SearchWidget extends AbstractComponent {
 
     public void enter(String keyword) {
         this.searchBar.clear();
-        this.searchBar.sendKeys(keyword);
+        for (char ch : keyword.toCharArray()){
+            this.searchBar.sendKeys(ch + "");
+        }
+
     }
 
     @Override
