@@ -1,6 +1,5 @@
-package co.com.sofka.srp.main;
+package co.com.sofka.srp.common;
 
-import co.com.sofka.srp.common.AbstractComponent;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

@@ -1,12 +1,14 @@
-package co.com.sofka.srp;
+package co.com.sofka.srp.main;
 
+import co.com.sofka.srp.common.SearchSuggestion;
+import co.com.sofka.srp.common.SearchWidget;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class GoogleMainPage {
-    private WebDriver driver;
-    private SearchWidget searchWidget;
-    private SearchSuggestion searchSuggestion;
+    private final WebDriver driver;
+    private final SearchWidget searchWidget;
+    private final SearchSuggestion searchSuggestion;
 
     public GoogleMainPage(WebDriver driver) {
         this.driver = driver;

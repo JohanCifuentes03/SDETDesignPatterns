@@ -1,4 +1,4 @@
-package co.com.sofka.srp;
+package co.com.sofka.srp.common;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-abstract class AbstractComponent {
+public abstract class AbstractComponent {
     protected WebDriverWait wait;
 
     protected AbstractComponent(WebDriver driver) {
