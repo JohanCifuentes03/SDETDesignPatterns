@@ -17,6 +17,7 @@ public class BaseTest {
         options.addArguments("–-disable-application-cache");
 
         this.driver = new ChromeDriver(options);
+        this.driver.manage().window().maximize();
     }
 
     @AfterTest
