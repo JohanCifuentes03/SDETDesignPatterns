@@ -19,6 +19,9 @@ public class SearchFlight extends AbstractComponent {
     @FindBy(xpath = "//label[text()='Arrival airport']/ancestor::div[@class='destination-dropdown']//li")
     private List<WebElement> arrivalAirportOptions;
 
+    @FindBy(css = "form button[type='submit']")
+    private WebElement submitBtn;
+
     public SearchFlight(WebDriver driver) {
         super(driver);
     }
@@ -32,6 +35,10 @@ public class SearchFlight extends AbstractComponent {
         actions.scrollToElement(this.departureAirport);
         this.departureAirport.click();
         wait.until(d -> departureAirportOptions.get(0).isDisplayed());
+    }
+
+    public void submit() {
+        this.submitBtn.click();
     }
 
     public void selectDepartureAirportByIndex(int index) {

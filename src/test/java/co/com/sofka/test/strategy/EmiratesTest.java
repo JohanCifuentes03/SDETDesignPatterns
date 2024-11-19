@@ -15,11 +15,16 @@ public class EmiratesTest extends BaseTest {
 
     @Test
     public void reserveFly(){
+        submitBasicData();
+    }
+
+    public void submitBasicData(){
         emiratesPage.goTo();
-        emiratesPage.getCookies().acceptCookies();
-        emiratesPage.getSearchFlight().openDepartureAirportOptions();
-        emiratesPage.getSearchFlight().selectDepartureAirportByIndex(1);
-        emiratesPage.getSearchFlight().openArrivalAirportOptions();
-        emiratesPage.getSearchFlight().selectArrivalAirportByIndex(0);
+        emiratesPage.acceptCookies();
+        emiratesPage.searchDepartureAirportByIndex(0);
+        emiratesPage.searchArrivalAirportByIndex(1);
+        emiratesPage.searchDate("November", 20);
+        emiratesPage.searchDate("January", 15);
+        emiratesPage.submit();
     }
 }
