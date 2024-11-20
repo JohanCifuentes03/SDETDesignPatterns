@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.Map;
 
-public class Paypal implements PaymentOption{
+public class Paypal implements PaymentOption {
     @FindBy(id = "paypal_username")
     private WebElement username;
 

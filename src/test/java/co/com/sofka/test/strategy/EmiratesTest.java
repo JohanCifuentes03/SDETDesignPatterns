@@ -9,22 +9,22 @@ public class EmiratesTest extends BaseTest {
     private EmiratesPage emiratesPage;
 
     @BeforeTest
-    public void setEmiratesPage(){
+    public void setEmiratesPage() {
         this.emiratesPage = new EmiratesPage(driver);
     }
 
     @Test
-    public void reserveFly(){
+    public void reserveFly() {
         submitBasicData();
     }
 
-    public void submitBasicData(){
+    public void submitBasicData() {
         emiratesPage.goTo();
         emiratesPage.acceptCookies();
         emiratesPage.searchDepartureAirportByIndex(0);
         emiratesPage.searchArrivalAirportByIndex(1);
         emiratesPage.searchDate("November", 20);
-        emiratesPage.searchDate("January", 15);
+        emiratesPage.searchDate("March", 15);
         emiratesPage.submit();
     }
 }

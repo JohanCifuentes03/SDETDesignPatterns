@@ -1,9 +1,7 @@
 package co.com.sofka.strategy;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 public class UserInformation {
     @FindBy(id = "fn")
@@ -14,10 +12,6 @@ public class UserInformation {
 
     @FindBy(id = "email")
     private WebElement email;
-
-    public UserInformation(WebDriver driver){
-        PageFactory.initElements(driver, this);
-    }
 
     public void enterDetails(String firstName, String lastName, String email) {
         this.firstName.sendKeys(firstName);

@@ -21,7 +21,7 @@ public class PaymentScreen {
         return userInformation;
     }
 
-    public void goTo(){
+    public void goTo() {
         driver.get("https://vins-udemy.s3.amazonaws.com/ds/strategy.html");
     }
 
@@ -29,7 +29,7 @@ public class PaymentScreen {
         return order;
     }
 
-    public void pay(Map<String, String> paymentDetails){
+    public void pay(Map<String, String> paymentDetails) {
         paymentOption.enterPaymentInfo(paymentDetails);
     }
 

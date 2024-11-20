@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.Map;
 
-public class CreditCard implements PaymentOption{
+public class CreditCard implements PaymentOption {
     @FindBy(id = "cc")
     private WebElement cc;
 
