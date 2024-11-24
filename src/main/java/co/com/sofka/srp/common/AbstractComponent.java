@@ -10,7 +10,7 @@ public abstract class AbstractComponent {
     protected WebDriverWait wait;
 
     protected AbstractComponent(WebDriver driver) {
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         PageFactory.initElements(driver, this);
     }
 
